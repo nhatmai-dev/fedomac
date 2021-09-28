@@ -1,0 +1,19 @@
+{
+  "name": "@fedomac/api",
+  "version": "0.0.0",
+  "description": "API of Fedomac homepage",
+  "author": "Fedomac",
+  "repository": "git@github.com:nhatmai-dev/fedomac.git",
+  "main": "index.js",
+  "private": true,
+  "license": "MIT",
+  "dependencies": {
+    "@fedomac/core": "*"
+  },
+  "scripts": {
+    "start": "echo start",
+    "test": "echo test",
+    "lint": "eslint \"./*\" --fix",
+    "build": "echo build"
+  }
+}
