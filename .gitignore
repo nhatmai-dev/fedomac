@@ -1,0 +1,14 @@
+# General
+node_modules
+
+# OS
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+Thumbs.db
+Thumbs.db:encryptable
+
+# IDE
+.vscode
+.idea

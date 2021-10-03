@@ -1,0 +1,10 @@
+{
+  "name": "@fedomac/core",
+  "version": "0.0.0",
+  "description": "Common code of Fedomac homepage",
+  "author": "Fedomac",
+  "repository": "git@github.com:nhatmai-dev/fedomac.git",
+  "main": "index.js",
+  "private": true,
+  "license": "MIT"
+}
