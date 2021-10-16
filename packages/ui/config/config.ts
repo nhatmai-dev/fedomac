@@ -37,7 +37,7 @@ export default defineConfig({
                 {
                     name: 'Create New Article',
                     path: '/admin/knowledge-base/new',    
-                    component: './admin/knowledge-base/create-new'
+                    component: './admin/knowledge-base/create'
                 }
                 
             ]
