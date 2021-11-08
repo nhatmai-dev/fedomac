@@ -8,12 +8,30 @@
   "private": true,
   "license": "MIT",
   "dependencies": {
-    "@fedomac/core": "*"
+    "@fedomac/core": "*",
+    "@fedomac/db": "*",
+    "@hapi/boom": "^9.1.4",
+    "dotenv": "^10.0.0",
+    "esm": "^3.2.25",
+    "express": "^4.17.1",
+    "helmet": "^4.6.0",
+    "http-status": "^1.5.0",
+    "joi": "^17.4.2",
+    "joi-objectid": "^4.0.2",
+    "lodash": "^4.17.21",
+    "mongoose": "^6.0.10",
+    "pino-http": "^5.8.0",
+    "swagger-jsdoc": "^6.1.0",
+    "swagger-ui-express": "^4.1.6",
+    "uuid": "^8.3.2"
   },
   "scripts": {
-    "start": "echo start",
+    "start": "nodemon -r esm -r dotenv/config --watch src src/app.js",
     "test": "echo test",
-    "lint": "eslint \"./*\" --fix",
+    "lint": "eslint \"./src/*\" --fix",
     "build": "echo build"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.14"
   }
 }

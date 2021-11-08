@@ -1,4 +1,6 @@
 {
+  "name": "@fedomac/ui",
+  "version": "0.0.0",
   "private": true,
   "scripts": {
     "start": "umi dev",
