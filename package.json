@@ -6,10 +6,19 @@
   "repository": "git@github.com:nhatmai-dev/fedomac.git",
   "main": "index.js",
   "workspaces": [
-    "./packages/*"
+    "packages/*"
   ],
   "private": true,
   "license": "MIT",
+  "scripts": {
+    "preinstall": "yarn global add rimraf",
+    "postinstall": "husky install",
+    "purge": "rimraf node_modules/ yarn.lock packages/*/node_modules",
+    "start:api": "yarn workspace @fedomac/api start",
+    "start:ui": "",
+    "clean": "",
+    "lint": ""
+  },
   "devDependencies": {
     "@commitlint/cli": "^13.2.0",
     "@commitlint/config-conventional": "^13.2.0",
@@ -18,12 +27,14 @@
     "eslint": "^7.2.0",
     "eslint-config-airbnb": "18.2.1",
     "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-babel": "^5.3.1",
     "eslint-plugin-import": "^2.22.1",
     "eslint-plugin-jsx-a11y": "^6.4.1",
     "eslint-plugin-prettier": "^4.0.0",
     "eslint-plugin-react": "^7.21.5",
     "eslint-plugin-react-hooks": "^1.7.0",
     "husky": "^7.0.2",
+    "jsdoc": "^3.6.7",
     "lint-staged": "^11.1.2",
     "prettier": "^2.4.1"
   },
