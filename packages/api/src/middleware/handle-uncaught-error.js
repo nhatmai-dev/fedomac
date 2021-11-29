@@ -10,11 +10,16 @@ const buildErrorResponseBody = (err) => ({
   },
 })
 
-export default (err, req, res, next) => {
+export const handleUncaughtError = (err, req, res, next) => {
   if (err instanceof Joi.ValidationError) {
     return res.status(HttpStatus.BAD_REQUEST).json(buildErrorResponseBody(err))
   }
   if (err.isBoom) {
+    return res.status(err.output.statusCode).json({
+      error: {
+        message: err.message,
+      },
+    })
   }
   logger.error(err, 'Uncaught error:')
   return res.status(HttpStatus.BAD_REQUEST).json(buildErrorResponseBody(err))

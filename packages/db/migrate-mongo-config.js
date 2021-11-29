@@ -1,4 +1,4 @@
-import { settings } from '@fedomac/core'
+const { settings } = require('esm')(module)('@fedomac/core')
 
 const { host, port, username, password, name } = settings.database
 

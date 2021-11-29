@@ -76,7 +76,6 @@ const articleRouter = express.Router()
  * @openapi
  * paths:
  *   /article:
- *     summary: Article
  *     post:
  *       summary: creates an article
  *       tags:

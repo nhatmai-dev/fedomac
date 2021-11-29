@@ -11,8 +11,7 @@
   "private": true,
   "license": "MIT",
   "scripts": {
-    "preinstall": "yarn global add rimraf",
-    "postinstall": "husky install",
+    "preinstall": "yarn global add rimraf husky commitizen",
     "purge": "rimraf node_modules/ yarn.lock packages/*/node_modules",
     "start:api": "yarn workspace @fedomac/api start",
     "start:ui": "",
