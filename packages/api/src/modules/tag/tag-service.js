@@ -1,5 +1,4 @@
 import Boom from '@hapi/boom'
-import lodash from 'lodash'
 
 import { consts } from '@fedomac/core'
 import { DatabaseHelper } from '@fedomac/db'
@@ -26,7 +25,7 @@ export class TagService {
   }
 
   async create(data, dbTx) {
-    const transaction = dbTx || await DatabaseHelper.startTransaction()
+    const transaction = dbTx || (await DatabaseHelper.startTransaction())
 
     let tag
     try {
