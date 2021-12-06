@@ -12,7 +12,7 @@ const options = {
     openapi: '3.0.0',
     servers: [
       {
-        url: 'http://localhost:5000',
+        url: 'http://localhost:5000/api',
         description: 'Local server',
       },
     ],

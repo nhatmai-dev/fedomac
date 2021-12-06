@@ -2,11 +2,13 @@ import express from 'express'
 import swaggerUI from 'swagger-ui-express'
 
 import { articleRouter } from './modules/article/article-router'
+import { tagRouter } from './modules/tag/tag-router'
 import { uploadRouter } from './modules/upload/upload-router'
 import swaggerDocs from './docs/swagger-config'
 
 const routerMap = [
   ['/article', articleRouter],
+  ['/tag', tagRouter],
   ['/upload', uploadRouter],
 ]
 
