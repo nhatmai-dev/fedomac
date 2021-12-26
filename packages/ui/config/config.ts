@@ -1,47 +1,46 @@
 import { defineConfig } from 'umi';
 
 export default defineConfig({
-    nodeModulesTransform: {
-        type: 'none',
-      },
-      layout: {
-        title: 'Fedomac',
-        locale: true
-      },
+  nodeModulesTransform: {
+    type: 'none',
+  },
+  layout: {
+    title: 'Fedomac',
+    locale: true,
+  },
+  routes: [
+    {
+      path: '/',
+      name: 'index',
+      hideInMenu: true,
+      component: './',
+    },
+    {
+      // name: 'admin',
+      path: 'admin',
+      component: './admin',
+    },
+    {
+      path: '/admin/knowledge-base',
+      name: 'Knoweledge Base',
+      icon: 'bulb',
       routes: [
         {
-            path: '/',
-            name: "index",
-            hideInMenu:true,
-            component: './'
+          path: '/admin/knowledge-base',
+          redirect: '/admin/knowledge-base/articles',
         },
         {
-            // name: 'admin',
-            path: 'admin',
-            component: './admin'
+          name: 'Articles',
+          path: '/admin/knowledge-base/articles',
+          component: './admin/knowledge-base/articles',
         },
         {
-            path: '/admin/knowledge-base',
-            name: 'Knoweledge Base',
-            icon: 'bulb',
-            routes:[
-                {
-                    path: '/admin/knowledge-base',
-                    redirect: '/admin/knowledge-base/articles',
-                },
-                {
-                    name: 'All Articles',
-                    path: '/admin/knowledge-base/articles',    
-                    component: './admin/knowledge-base/articles'
-                },
-                {
-                    name: 'Create New Article',
-                    path: '/admin/knowledge-base/new',    
-                    component: './admin/knowledge-base/create'
-                }
-                
-            ]
-        }        
+          name: 'Create New Article',
+          path: '/admin/knowledge-base/new',
+          component: './admin/knowledge-base/create',
+        },
       ],
-      fastRefresh: {},
+    },
+  ],
+  fastRefresh: {},
 });
